@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>Pojeto-Web-Wide</title>
+      <link rel="stylesheet" type="text/css" href="Style/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet"> 
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      
+	</head>
+<body>
+    <div> 
+        <h1 class="texto">CLIQUE AQUI PARA LISTAR<br/>OS USUÁRIOS.</h1>
+          <button type="button" id="mybutton"><a class="scroll" href="#bt">CLIQUE AQUI</a></button>
+   </div>
+   
+        <h2>Lista de usuários</h2>
+        <table>
+          <tr>
+              <th>Name</th>
+              <th>Username</th> 
+              <th>E-mail</th>
+          <tbody id="tab"></tbody>
+        </table>
+        <div id="bt"></div>
+    </div>   
+       
+             
+</body>
+</html>
+
+<Script>
+    $("#mybutton").on("click", function(){
+        $.ajax({
+             url: "http://jsonplaceholder.typicode.com/users",
+                success: function( result ) {
+                 for(i=0; i <= result.length; i++){
+                    $("#tab").append("<tr><td>"+result[i].name+"</td>"+"<td>"+result[i].username+"</td>"+"<td>"+result[i].email+"</td></tr>");
+                }
+            }
+        });  
+  });
+</Script>
+
+<script>
+  $(document).ready(function($) { 
+      $(".scroll").click(function(event){        
+          event.preventDefault();
+          $('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
+     });
+  });
+  </script>
+
