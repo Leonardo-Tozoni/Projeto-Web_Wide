@@ -49,8 +49,6 @@
     box-shadow: 2px 2px 4px black;
     padding: 20px;
     text-align: center;
-    margin-bottom: 100px; 
-    margin-left: 200px;
     font-family: Arial, Helvetica, sans-serif;
   }
   
@@ -61,7 +59,7 @@
   }
 
   table {
-    width:80%;
+    width:100%;
   }
 
   
