@@ -1,4 +1,4 @@
-#mybutton {
+#buttonscroll {
   background-color: black;
   color: white;
   width: 600px;
@@ -8,16 +8,16 @@
   
   }
 
-  #mybutton a {
+  #buttonscroll a {
     text-decoration: none;
     color: white;
   }
 
-  #mybutton a :visited { 
+  #buttonscroll a :visited { 
     color: white; 
   }
 
-  #mybutton :hover {
+  #buttonscroll :hover {
     color: rgb(170, 169, 169);
     text-decoration: none;
   }
